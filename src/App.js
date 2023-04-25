@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider, createHashRouter} from 'react-router-dom'
 import Layout from './components/Layout/Layout.jsx'
 import Home from './components/Home/Home.jsx'
 import Cart from './components/Cart/Cart.jsx'
@@ -31,7 +31,6 @@ import ForgotPassword from './components/ForgotPassword/ForgotPassword.jsx'
 import VerifyCode from './components/VerifyCode/VerifyCode.jsx'
 import ResetPassword from './components/ResetPassword/ResetPassword.jsx'
 
-
 export default function App() {
   const [userData, setUserData] = useState(null);
 
@@ -48,7 +47,7 @@ export default function App() {
   }, [])
 
 
-  let routers = createBrowserRouter([
+  let routers = createHashRouter([
     {
       path: '', element: <Layout setUserData={setUserData} userData={userData} />, children: [
         { index: true, element: <Home /> },
