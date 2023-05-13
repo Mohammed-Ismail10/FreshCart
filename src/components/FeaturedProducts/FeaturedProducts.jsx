@@ -40,7 +40,7 @@ async function addToWishlistFun(id){
   async function getFeaturedProducts() {
     setLoading(true);
     let { data } = await axios.get(
-      `https://route-ecommerce.onrender.com/api/v1/products`
+      `https://route-ecommerce-app.vercel.app/api/v1/products`
     );
     setProducts(data.data);
     setLoading(false);
