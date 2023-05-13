@@ -14,7 +14,7 @@ const [error, setError] = useState('');
 
   async function login(values) {
     setIsLoading(true);
-    let {data}=await axios.post(`https://route-ecommerce.onrender.com/api/v1/auth/signin`,values).catch((data)=>{
+    let {data}=await axios.post(`https://route-ecommerce-app.vercel.app/api/v1/auth/signin`,values).catch((data)=>{
     setIsLoading(false);
     setError(`${data.response.data.message}`);
   });

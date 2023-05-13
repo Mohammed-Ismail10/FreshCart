@@ -47,7 +47,7 @@ export function UpdateUserContextProvider({ children }) {
   }
 
   function ForgotUserPassword(values) {
-    return axios.post(`https://route-ecommerce.onrender.com/api/v1/auth/forgotPasswords`,values
+    return axios.post(`https://route-ecommerce-app.vercel.app/api/v1/auth/forgotPasswords`,values
       ).then((response)=>response)
       .catch(({response})=>{
         setError(response.data.message);
@@ -56,14 +56,14 @@ export function UpdateUserContextProvider({ children }) {
 
 
   function VerifyFromCode(values) {
-    return axios.post(`https://route-ecommerce.onrender.com/api/v1/auth/verifyResetCode`,values
+    return axios.post(`https://route-ecommerce-app.vercel.app/api/v1/auth/verifyResetCode`,values
       ).then((response)=>response)
       .catch(({response})=>{
         setError(response.data.message);
       })
   }
   function ResetUserPassword(values) {
-    return axios.put(`https://route-ecommerce.onrender.com/api/v1/auth/resetPassword`,values
+    return axios.put(`https://route-ecommerce-app.vercel.app/api/v1/auth/resetPassword`,values
       ).then((response)=>response)
       .catch(({response})=>{
         setError(response.data.message);
