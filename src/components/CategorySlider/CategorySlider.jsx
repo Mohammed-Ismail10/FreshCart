@@ -8,7 +8,7 @@ const [loading, setLoading] = useState(false)
   async function getCategories() {
     setLoading(true);
     let { data } = await axios.get(
-      `https://route-ecommerce.onrender.com/api/v1/categories`
+      `https://ecommerce.routemisr.com/api/v1/categories`
     );
     setCategories(data.data);
     setLoading(false);

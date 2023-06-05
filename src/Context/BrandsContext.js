@@ -11,10 +11,10 @@ export function BrandsContextProvider({children}){
 
 
   function getBrands(){
-    return axios.get(`https://route-ecommerce-app.vercel.app/api/v1/brands`).then((response)=>response).catch((error)=>error);
+    return axios.get(`https://ecommerce.routemisr.com/api/v1/brands`).then((response)=>response).catch((error)=>error);
   }
   function getSpecificBrands(brandId){
-    return axios.get(`https://route-ecommerce-app.vercel.app/api/v1/brands/${brandId}`).then((response)=>response).catch((error)=>error);
+    return axios.get(`https://ecommerce.routemisr.com/api/v1/brands/${brandId}`).then((response)=>response).catch((error)=>error);
   }
 
 

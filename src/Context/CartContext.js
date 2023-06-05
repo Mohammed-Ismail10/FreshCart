@@ -32,7 +32,7 @@ const [numOfCartItems, setNumOfCartItems] = useState(0);
 
 
   function addToCart(productId) {
-    return axios.post(`https://route-ecommerce-app.vercel.app/api/v1/cart`,
+    return axios.post(`https://ecommerce.routemisr.com/api/v1/cart`,
       {
         productId: productId
       },
@@ -42,7 +42,7 @@ const [numOfCartItems, setNumOfCartItems] = useState(0);
   }
 
   function getLoggedCart() {
-    return axios.get(`https://route-ecommerce-app.vercel.app/api/v1/cart`,
+    return axios.get(`https://ecommerce.routemisr.com/api/v1/cart`,
       {
         headers: headers
       }).then((response) => response).catch(({response}) => {
@@ -50,13 +50,13 @@ const [numOfCartItems, setNumOfCartItems] = useState(0);
       });
   }
   function deleteItem(productId) {
-    return axios.delete(`https://route-ecommerce-app.vercel.app/api/v1/cart/${productId}`,
+    return axios.delete(`https://ecommerce.routemisr.com/api/v1/cart/${productId}`,
       {
         headers: headers
       }).then((response) => response).catch((error) => error);
   }
   function updateItem(productId, count) {
-    return axios.put(`https://route-ecommerce-app.vercel.app/api/v1/cart/${productId}`,
+    return axios.put(`https://ecommerce.routemisr.com/api/v1/cart/${productId}`,
       {
         count: count
       },
@@ -65,13 +65,13 @@ const [numOfCartItems, setNumOfCartItems] = useState(0);
       }).then((response) => response).catch((error) => error);
   }
   function clearAllItems() {
-    return axios.delete(`https://route-ecommerce-app.vercel.app/api/v1/cart`,
+    return axios.delete(`https://ecommerce.routemisr.com/api/v1/cart`,
       {
         headers: headers
       }).then((response) => response).catch((error) => error);
   }
   function onlinePayment(cartId, shippingAddress) {
-    return axios.post(`https://route-ecommerce-app.vercel.app/api/v1/orders/checkout-session/${cartId}?url=http://localhost:3000`,
+    return axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=http://localhost:3000`,
       {
         shippingAddress: shippingAddress
       },

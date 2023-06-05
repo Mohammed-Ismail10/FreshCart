@@ -12,7 +12,7 @@ export default function ProductDetails() {
   async function getProductDetails(id) {
     setLoading(true)
     let { data } = await axios.get(
-      `https://route-ecommerce.onrender.com/api/v1/products/${id}`
+      `https://ecommerce.routemisr.com/api/v1/products/${id}`
     );
     setProductDetails(data.data);
     setLoading(false)

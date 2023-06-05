@@ -8,13 +8,13 @@ export function CategoryContextProvider({children}){
 
 
 function getAllCategories(){
-  return axios.get(`https://route-ecommerce-app.vercel.app/api/v1/categories`).then((response)=>response).catch((error)=>error);
+  return axios.get(`https://ecommerce.routemisr.com/api/v1/categories`).then((response)=>response).catch((error)=>error);
 }
 function getAllSubCategories(){
-  return axios.get(`https://route-ecommerce-app.vercel.app/api/v1/subcategories`).then((response)=>response).catch((error)=>error);
+  return axios.get(`https://ecommerce.routemisr.com/api/v1/subcategories`).then((response)=>response).catch((error)=>error);
 }
 function getSpecificSubCategories(categoryId){
-  return axios.get(`https://route-ecommerce-app.vercel.app/api/v1/categories/${categoryId}/subcategories`).then((response)=>response).catch((error)=>error);
+  return axios.get(`https://ecommerce.routemisr.com/api/v1/categories/${categoryId}/subcategories`).then((response)=>response).catch((error)=>error);
 }
 
 

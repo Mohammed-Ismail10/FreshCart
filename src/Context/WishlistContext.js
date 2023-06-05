@@ -27,7 +27,7 @@ useEffect(()=>{
 
 
 function addToWishlist(productId){
-  return axios.post(`https://route-ecommerce-app.vercel.app/api/v1/wishlist`,{
+  return axios.post(`https://ecommerce.routemisr.com/api/v1/wishlist`,{
     productId
   },{
     headers
@@ -37,7 +37,7 @@ function addToWishlist(productId){
 
 
 function getLoggedWishlist(){
-  return axios.get(`https://route-ecommerce-app.vercel.app/api/v1/wishlist`,{
+  return axios.get(`https://ecommerce.routemisr.com/api/v1/wishlist`,{
     headers
   }).then((response)=>response).catch((error)=>error);
 }
@@ -45,7 +45,7 @@ function getLoggedWishlist(){
 
 
 function deleteWish(wishId){
-  return axios.delete(`https://route-ecommerce-app.vercel.app/api/v1/wishlist/${wishId}`,{
+  return axios.delete(`https://ecommerce.routemisr.com/api/v1/wishlist/${wishId}`,{
     headers
   }).then((response)=>response).catch((error)=>error);
 }
